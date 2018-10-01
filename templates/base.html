@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ASUKARU">
+    <meta name="description" content="佐賀県神埼市でAI、IoT開発をしているASUKARU（アスカル）の制作工程などの紹介。その他にも
+WEB開発や、ハードウェアに関すること、Pythonに関することからPHPや他の言語まで様々な関連情報を掲載していきます。">
+    <meta name="keywords" content="PythonによるAI・IoT・WEB開発について,ASUKARU,アスカル,佐賀県神埼市,AI,IoT,開発,ASUKARU,アスカル,
+WEB開発,ハードウェア,Python,PHP">
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+    <!-- Original CSS JS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <title>ASUKARU</title>
+
+</head>
+<body id="top">
+<header id="header">
+	<div id="headerWrap">
+		<h1>ASUKARU</h1>
+		<nav id="mainnav">
+			<p id="menuWrap"><a id="menu"><span id="menuBtn"></span></a></p>
+			<div class="panel">
+				<ul>
+					<li><a href="#top">TOP</a></li>
+					<li><a href="#sec01">MESSAGE</a></li>
+					<li><a href="#sec02">GALLERY</a></li>
+					<li><a href="#sec03">PROJECT</a></li>
+					<li><a href="#sec04">BRAND</a></li>
+					<li><a href="#sec05">COMPANY</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</header>
+
+<div id="mainImg">
+	{% block content %}{% endblock %}
+</div>
+
+<!-- MESSAGE -->
+<section id="sec01">
+	<header>
+		<h2><span>Message</span></h2>
+	</header>
+	<div class="innerS">
+        最近、AIやIoTへの関心が高まってきています。<br>
+        我々ASUKARU（アスカル）も、AIやIoTの開発をしています。開発の場は、佐賀県神埼市。
+		その理由は、単純にここが好きだから。<br>
+        ASUKARUの得意は、様々なご提案ができること。<br>
+        「もっとこうしたら楽になる」や「もっとこうすると良くなるのではないか」といったことをご提案すること。<br>
+        AIやIoT,WEBシステムを開発してきたエンジニアが<br>
+        直にクライアント様へご提案をすることで、拡張性の高いシステムを構築することができるのです。
+	</div>
+</section>
+<!-- // MESSAGE -->
+
+<!-- GALLERY -->
+<section id="sec02">
+	<header>
+		<h2><span>Gallery</span></h2>
+	</header>
+	<ul id="gallery">
+		<li><img src="images/photo01.jpg" width="426" height="418" alt=""></li>
+		<li><img src="images/photo02.jpg" width="426" height="418" alt=""></li>
+		<li><img src="images/photo03.jpg" width="426" height="418" alt=""></li>
+		<li><img src="images/photo04.jpg" width="426" height="418" alt=""></li>
+		<li><img src="images/photo05.jpg" width="426" height="418" alt=""></li>
+		<li><img src="images/photo06.jpg" width="426" height="418" alt=""></li>
+		<li><img src="images/photo07.jpg" width="426" height="418" alt=""></li>
+		<li><img src="images/photo08.jpg" width="426" height="418" alt=""></li>
+		<li><img src="images/photo09.jpg" width="426" height="418" alt=""></li>
+	</ul>
+</section>
+<!-- // GALLERY -->
+
+<!-- PROJECT -->
+<section id="sec03">
+	<header>
+		<h2><span>Project</span></h2>
+	</header>
+	<div class="innerS">
+		<img src="images/imgProject.jpg" width="726" height="333" alt="">
+		<p>統計学という学問に一度でも触れたことがある人であれば、それをシステム化することで様々なアーキテクトを構築することができないかと考えるだろう。</p>
+        <p>あるいは、AIやIoTを自社の事業の中に組み込むことでどのような効果がでてくるのかということを考えたことがあるだろうか。</p>
+        <p>機会学習やディープランニングは、本当に価値あるものを我々に提供してくれます。</p>
+        <p>一度体感してみると非常に面白いことが起こります。</p>
+        <p>我々のプロジェクトは、このような素晴らしいシステムを、より多くの方々へ知っていただくことである。</p>
+	</div>
+</section>
+<!-- // PROJECT -->
+
+<img src="images/subImg.jpg" alt="">
+
+<!-- BRAND -->
+<section id="sec04">
+	<header>
+		<h2><span>Brand</span></h2>
+	</header>
+	<div class="inner">
+		<ul class="col3">
+			<li>
+				<p class="img"><img src="{{ url_for('static', filename='images/logo01.png') }}" width="170" height="106" alt=""></p>
+                <h3><p>System</p></h3>
+                <p>システム開発は、現在よりもより利便性を向上させるという目的をもって実装がされます。現状の把握がまずは第一です。</p>
+			</li>
+			<li>
+				<p class="img"><img src="{{ url_for('static', filename='images/logo02.png') }}" width="170" height="106" alt=""></p>
+                <h3><p>IOS Android　App</p></h3>
+                <p>いわゆるアプリの開発は、ユーザーさまとのコミュニケーションのツールという感覚が現在では合致しています。より利便性のあるコミュニケーションツールにしていきましょう。</p>
+			</li>
+			<li>
+				<p class="img"><img src="{{ url_for('static', filename='images/logo03.png') }}" width="170" height="106" alt=""></p>
+                <h3><p>AI・IOT</p></h3>
+                <p>AIやIoTを活用することで、これまでは人のが計算をしていた分野（統計分析）を機械的に行うことができるようになります。活用の仕方は人それぞれです。</p>
+			</li>
+		</ul>
+	</div>
+	<div id="sec04_02">
+		<p><img src="images/logoBrand.png" width="340" height="107" alt=""></p>
+	</div>
+</section>
+<!-- // STORY -->
+
+<!-- COMPANY -->
+<section id="sec05">
+	<header>
+		<h2><span>Company</span></h2>
+	</header>
+	<div class="innerS">
+		<ul class="col2">
+			<li>
+                <p><strong>ASUKARU(アスカル)</strong></p>
+				<p>〒842-0002<br>佐賀県神埼市田道ヶ里2176-13</p>
+				<p>TEL 090--572-5441</p>
+				<p>e-Mail asukaru2014@icloud.com</p>
+				<p>営業時間 10:00〜20:00（日曜定休）</p>
+				<p>※都合により休業する場合がございます</p>
+				<p id="sns">
+					<a href="https://www.facebook.com/webenginire/"
+                       target="_blank"><img src="{{ url_for('static', filename='images/iconFb.png') }}"
+                                                     width="80" height="80" alt="FB"></a>
+					<a href="https://twitter.com/Asukaru2014"
+                       target="_blank"><img src="{{ url_for('static', filename='images/iconTw.png') }}"
+                                                     width="80" height="80" alt="twitter"></a>
+					<a href="https://www.youtube.com/results?search_query=%E9%81%A0%E8%97%A4%E6%98%8C%E5%B9%B3"
+                       target="_blank"><img src="{{ url_for('static' , filename='images/iconYouTube.png') }}"
+                                                     width="80" height="80" alt="You Tube"></a>
+				</p>
+			</li>
+			<li>
+				<div id="map">
+					<!-- GOOGLE MAP -->
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3334.293799660049!2d130.3763490149351!3d33.31113376386686!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3541b745c7a0085d%3A0x8990e76a8abba8ed!2z44CSODQyLTAwMDIg5L2Q6LOA55yM56We5Z-85biC56We5Z-855S655Sw6YGT44O26YeM77yS77yR77yX77yW4oiS77yR77yT!5e0!3m2!1sja!2sjp!4v1538296624123"
+                            width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+					<!-- // GOOGLE MAP -->
+				</div>
+			</li>
+		</ul>
+	</div>
+</section>
+<!-- // COMPANY -->
+
+<footer id="footer">
+	Copyright(c) 2014 ASUKARU Inc. All Rights Reserved.
+</footer>
+
+</body>
+</html>
