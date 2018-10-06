@@ -250,7 +250,19 @@ section h2 span {
 	body{
 		font-size:14px;
 	}
-	
+
+	#mainImg{
+        position: relative;
+        width: 100vw;
+        height: auto;
+    }
+
+    #mainImg img{
+        position: absolute;
+        width: 100vw;
+        height: auto;
+    }
+
   a#menu{
 		display:none;
 	}	
