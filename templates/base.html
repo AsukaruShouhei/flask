@@ -153,17 +153,45 @@ WEB開発,ハードウェア,Python,PHP">
 		<h2><span>Project</span></h2>
 	</header>
 	<div class="innerS">
-		<img src="images/imgProject.jpg" width="726" height="333" alt="">
-		<p>統計学という学問に一度でも触れたことがある人であれば、それをシステム化することで様々なアーキテクトを構築することができないかと考えるだろう。</p>
-        <p>あるいは、AIやIoTを自社の事業の中に組み込むことでどのような効果がでてくるのかということを考えたことがあるだろうか。</p>
-        <p>機会学習やディープランニングは、本当に価値あるものを我々に提供してくれます。</p>
-        <p>一度体感してみると非常に面白いことが起こります。</p>
-        <p>我々のプロジェクトは、このような素晴らしいシステムを、より多くの方々へ知っていただくことである。</p>
+		<div id="iii" style="float: left;width: 42%;">
+			<img src="{{ url_for('static', filename='images/photo.jpg') }}">
+		</div>
+		<div id="prof" style="float: left;width:58%; ">
+			<p> ASUKARU　代表　　遠藤昌平 </p>
+			<p> お祭りが大好きです！でっかくなったら祭りを開催します！ </p>
+			<p>　法科大学院卒業後、大分県にある実家の企業で船員をしながらシステム開発について勉強。PHPなどからPythonを扱い開発。　</p>
+			<p>　2018年から佐賀県にてSystem開発。大手上場企業などでPython・PHPエンジニアとして活動をしながら、大学でPythonエンジニアとして公演。
+				　独自に音声合成に関する研究を行いながら、
+				現在、より多くの方々へシステムを通じて、様々な業界で利便性の向上と利用者の方々の喜びを共有すべくAUSUKARUを佐賀県にて立ち上げ独自に活動中！
+				<a href="https://www.saga-smart.jp/">佐賀県産業スマート化センター</a>
+				とも連携しながらAIなどを開発。　</p>
+			<p>　みなさんのお手元にAIエンジニア（　その他開発エンジニアなど　）としてお伺いして開発をすることが最大の愉しみ！！　</p>
+		</div>
+		<div class="clear" style="clear: both;"></div>
+		<p>　統計学という学問に一度でも触れたことがある人であれば、それをシステム化することで様々なアーキテクトを構築することができないかと考える。</p>
+        <p>　あるいは、AIやIoTを自社の事業の中に組み込むことでどのような効果がでてくるのかということを考えたことがあるだろうか。</p>
+        <p>　機会学習やディープランニングは、本当に価値あるものを我々に提供してくれます。</p>
+        <p>　一度体感してみると非常に面白いことが起こる。</p>
+        <p>　我々のプロジェクトは、このような素晴らしいシステムを、より多くの方々へ知っていただき、活用していただくこと。</p>
 	</div>
 </section>
-<!-- // PROJECT -->
+		<!-- // PROJECT -->
+	<section id="youtube">
+		<div class="innerS">
+			<h3> Pythonという言語 </h3>
+			<div class="chans">
+				<p style="font-size:15px"><strong>　実務でのPythonと本を読んだりしただけのPythonとでは細かいところで差がでてきます。　</strong></p>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/rlDPIKbQw8c"
+					frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+			<div class="chens">
+				<p style="font-size:15px"><strong>　機会学習についての簡単な動画　</strong></p>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/0yV_wHCtqzw" frameborder="0"
+						allow="autoplay; encrypted-media" allowfullscreen></iframe>
+			</div>
+		</div>
 
-<img src="images/subImg.jpg" alt="">
+	</section>
 
 <!-- BRAND -->
 <section id="sec04">
@@ -230,6 +258,11 @@ WEB開発,ハードウェア,Python,PHP">
 				</div>
 			</li>
 		</ul>
+		<div class="onayamisoudann">
+			<form method="post">
+
+			</form>
+		</div>
 	</div>
 </section>
 <!-- // COMPANY -->
