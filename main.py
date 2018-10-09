@@ -20,13 +20,13 @@ def add_header(response):
 
 @app.route('/')
 def index():
-    # host = socket.gethostname()
-    # ip = socket.gethostbyname(host)
-    # savepath = './user_logs/'
-    # if not os.path.exists(savepath): os.mkdir(savepath)
-    # with open(savepath + 'user_logs.csv', 'a', encoding='utf-8') as f:
-    #     writer = csv.writer(f, lineterminator='\n')
-    #     writer.writerow([datetime.datetime.now(), host, ip])
+    host = socket.gethostname()
+    ip = socket.gethostbyname(host)
+    savepath = './user_logs/'
+    if not os.path.exists(savepath): os.mkdir(savepath)
+    with open(savepath + 'user_logs.csv', 'a', encoding='utf-8') as f:
+        writer = csv.writer(f, lineterminator='\n')
+        writer.writerow([datetime.datetime.now(), host, ip])
     return render_template('index.html')
 
 
