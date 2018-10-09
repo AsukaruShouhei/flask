@@ -4,6 +4,7 @@ from flask import Flask, render_template, url_for, Response
 import socket
 import csv
 import datetime
+import os
 
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 300
@@ -21,7 +22,9 @@ def add_header(response):
 def index():
     host = socket.gethostname()
     ip = socket.gethostbyname(host)
-    with open('logs/user_logs.csv', 'a', encoding='utf-8') as f:
+    savepath = './logs/'
+    if os.path.exists(savepath): os.mkdir(savepath)
+    with open(savepath + 'user_logs.csv', 'a', encoding='utf-8') as f:
         writer = csv.writer(f, lineterminator='\n')
         writer.writerow([datetime.datetime.now(), host, ip])
     return render_template('index.html')
