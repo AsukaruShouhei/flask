@@ -22,7 +22,7 @@ def add_header(response):
 def index():
     host = socket.gethostname()
     ip = socket.gethostbyname(host)
-    savepath = './logs/'
+    savepath = './user_logs/'
     if not os.path.exists(savepath): os.mkdir(savepath)
     with open(savepath + 'user_logs.csv', 'a', encoding='utf-8') as f:
         writer = csv.writer(f, lineterminator='\n')
