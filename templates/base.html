@@ -45,6 +45,7 @@ WEB開発,ハードウェア,Python,PHP">
 					<li><a href="#sec03">PROJECT</a></li>
 					<li><a href="#sec04">BRAND</a></li>
 					<li><a href="#sec05">COMPANY</a></li>
+					<li><a href="#onayamisoudann">CONTACT</a></li>
 					<li><a href="https://asukaru.sakura.ne.jp/asutyan/
 					blog%E8%A8%98%E4%BA%8B%e3%80%80%E4%B8%80%E8%A6%A7/">BLOG</a></li>
 				</ul>
@@ -258,9 +259,28 @@ WEB開発,ハードウェア,Python,PHP">
 				</div>
 			</li>
 		</ul>
-		<div class="onayamisoudann">
-			<form method="post">
-
+		<div id="onayamisoudann">
+			<h2><span>お問合せはこちらから</span></h2>
+            {% if success %}
+                <div class="alert alert-info">
+                <strong>Success! </strong> {{ success }}
+                </div>
+            {% endif %}
+			<form method="post" action="contact">
+				{{ form.csrf_token }}
+				<div class="form-group">
+					<label for="exampleFormControlInput1">Email address</label>
+					<input type="email" class="form-control" id="exampleFormControlInput1"
+						   placeholder="name@example.com" name="email" required="">
+				</div>
+				 <div class="form-group">
+					 <div class="form-group">
+						 <label for="exampleFormControlTextarea1">本文</label>
+						 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+								   name="message" required=""></textarea>
+					 </div>
+				 </div>
+				<button type="submit" class="btn btn-outline-info btn-lg btn-block">送信する</button>
 			</form>
 		</div>
 	</div>
