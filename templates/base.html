@@ -266,13 +266,8 @@ WEB開発,ハードウェア,Python,PHP">
                 <strong>Success! </strong> {{ success }}
                 </div>
             {% endif %}
-			<form method="post" action="contact">
-				{{ form.csrf_token }}
-				<div class="form-group">
-					<label for="exampleFormControlInput1">Email address</label>
-					<input type="email" class="form-control" id="exampleFormControlInput1"
-						   placeholder="name@example.com" name="email" required="">
-				</div>
+			<form method="post" action="/contact">
+				{{ csrf_token }}
 				 <div class="form-group">
 					 <div class="form-group">
 						 <label for="exampleFormControlTextarea1">本文</label>
