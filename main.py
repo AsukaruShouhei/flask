@@ -4,7 +4,6 @@ from flask import Flask, render_template, url_for, Response, request
 import socket
 import csv
 import datetime
-import pyautogui
 import time
 import smtplib
 from email.mime.text import MIMEText
