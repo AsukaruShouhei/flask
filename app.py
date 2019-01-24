@@ -6,18 +6,13 @@ import csv
 import datetime
 import pyautogui
 import time
-from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField
-from wtforms.validators import Required
+import smtplib
+from email.mime.text import MIMEText
+
 
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 300
 
-
-
-class NameForm(FlaskForm):
-    name = StringField('name:', validators=Required)
-    submit = SubmitField('Submit')
 
 
 @app.after_request
@@ -42,6 +37,19 @@ def index():
 def contact():
     if request.method == 'POST':
         success = 'お問合せありがとうございます。'
+        body = request.form['message']
+        msg = MIMEText(body)
+        msg["Subject"] = "お客様からお問い合わせ"
+        msg["From"] = "ASUKARU WEB サイトからのお問い合わせ"
+        msg["To"] = "asukaru.endo@gmail.com"
+        s = smtplib.SMTP("smtp.gmail.com", 587)
+        s.ehlo()
+        s.starttls()
+        s.ehlo()
+        s.login("asukaru.endo@gmail.com", "as2014es")
+        s.send_message(msg)
+        s.close()
+
         return render_template('index.html', success=success)
 
 
