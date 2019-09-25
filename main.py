@@ -45,7 +45,7 @@ def contact():
         s.ehlo()
         s.starttls()
         s.ehlo()
-        s.login("asukaru.endo@gmail.com", "as2014es")
+        s.login("asukaru.endo@gmail.com", "")
         s.send_message(msg)
         s.close()
 
